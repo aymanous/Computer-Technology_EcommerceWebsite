@@ -1,7 +1,8 @@
-app:
-    resource: "@AppBundle/Controller/"
+acme_store:
+    resource: "@AcmeStoreBundle/Controller/"
     type:     annotation
+    prefix:   /
 
-hello_the_world:
-    path:     /hello-world
-    defaults: { _controller: AppBundle:Advert:index }
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

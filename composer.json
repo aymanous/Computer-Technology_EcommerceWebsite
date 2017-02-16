@@ -7,6 +7,17 @@
         "psr-4": { "": "src/" },
         "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
     },
+    "repositories": [
+      {
+        "type": "vcs",
+        "url": "https://github.com/faithpromise/fp-shared.git"
+      },
+      {
+      "type": "composer",
+       "url": "https://packagist.org"
+      },
+     { "packagist": false }
+    ],
     "require": {
         "php": ">=5.3.9",
         "symfony/symfony": "2.8.*",
@@ -16,7 +27,13 @@
         "symfony/monolog-bundle": "~2.11.3",
         "sensio/distribution-bundle": "~5.0",
         "sensio/framework-extra-bundle": "^3.0.2",
-        "incenteev/composer-parameter-handler": "~2.0"
+        "incenteev/composer-parameter-handler": "~2.0",
+        "doctrine/mongodb": "~1.2",
+        "ext-mongo": "*", 
+        "doctrine/mongodb-odm": "~1.0",
+        "doctrine/mongodb-odm-bundle": "~3.0",
+        "friendsofsymfony/user-bundle": "~2.0@dev",
+        "symfony/assetic-bundle": "^2.8"
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.0",
@@ -39,10 +56,7 @@
         ]
     },
     "config": {
-        "bin-dir": "bin",
-        "platform": {
-            "php": "5.3.9"
-        }
+        "bin-dir": "bin"
     },
     "extra": {
         "symfony-app-dir": "app",
